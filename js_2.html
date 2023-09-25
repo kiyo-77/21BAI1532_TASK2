@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+    <label for="inp">Enter a string: </label>
+    <input type="text" id="inp" required><br><br>
+
+    <button onclick="alpsort()">Sort</button><br><br>
+
+    <div id="result"></div>
+
+    <script>
+        function alpsort() {
+           
+            const inp = document.getElementById("inp").value;
+
+           
+            if (inp === "") {
+                document.getElementById("result").innerHTML = "Please enter a string.";
+                return;
+        }
+
+           
+            const alps = inp.split("").sort().join("");
+
+           
+            document.getElementById("result").innerHTML = `Sorted string: ${alps}`;
+        }
+    </script>
+</body>
+</html>

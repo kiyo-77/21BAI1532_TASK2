@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #car {
+      position: relative;
+      cursor: pointer;
+    }
+    h1
+    {
+        color:blue;
+    }
+    div
+    {
+       
+       margin-left:400px;
+    }
+  </style>
+</head>
+
+<body>
+    <img id="car" src="car.jpg">
+ <h1 >Click the following buttons to handle the animation</h1>
+ <div> 
+   <button id="st">start</button>&emsp;&emsp;
+   <button id="stp">stop</button>
+   </div>
+ 
+
+
+  <script>
+    st.onclick = function() {
+      let start = Date.now();
+
+      let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+
+        car.style.left = timePassed / 5 + 'px';
+       stp.onclick=function()
+       {
+        clearInterval(timer);
+       }
+        if (timePassed > 6500) clearInterval(timer);
+
+      }, 20);
+    }
+
+    
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   
+  </head>
+  <style>
+    form
+    {
+        margin-top:200px;
+        margin-left:400px;
+        padding:30px;
+        margin-right:200px;
+    }
+  .invalid-feedback
+  {
+    margin-left:100px;
+    margin-bottom:10px;
+  }
+  </style>
+  <body>
+    <div class="row">
+      <div class="col">
+       
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1">
+        <form method="POST" action="#" class="needs-validation" novalidate>
+          <div class="form-group">
+           <div class="input-group">
+            <label for="fname">First name:&emsp;&emsp;</label>
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" id="fname" name="fname" placeholder="Your first name..." required>
+            <div class="invalid-feedback">Please supply your first name.</div>
+        </div>
+      <br>
+        <div class="form-group">
+            <div class="input-group">
+             <label for="fname">Last name:&emsp;&emsp;</label>
+             <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+             <input type="text" class="form-control" id="fname" name="fname" placeholder="Your last name..." required>
+             <div class="invalid-feedback">Please supply your last name.</div>
+         </div>
+         <br>
+          <div class="form-group">
+            <div class="input-group">
+              
+            <label class="mt-3" for="email">E-mail:&emsp;&emsp;</label>
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Your e-mail..." required>
+            <div class="invalid-feedback">Please supply your e-mail.</div>
+            </div>
+            <br>
+          <div class="form-group">
+            <div class="input-group">
+                
+            <label class="mt-3" for="phone">Phone#&emsp;&emsp;</label>
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone" aria-hidden="true"></i></i></span>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone number..." required>
+            <div class="invalid-feedback">Please supply your phone number.</div></div>
+            <br>
+            <div class="form-group">
+                <div class="input-group">
+                   
+                <label class="mt-3" for="address">Address&emsp;&emsp;</label>
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
+                <div class="invalid-feedback">Please supply your street address.</div></div> <br>
+         
+                <div class="form-group">
+                    <div class="input-group">
+                     
+                    <label class="mt-3" for="city">City&emsp;&emsp;</label>
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-home" aria-hidden="true"></i></i></span>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="city" required>
+                    <div class="invalid-feedback">Please supply your city.</div></div> <br>
+             <div class="form-group">
+                        <div class="input-group">
+                         
+                        <label class="mt-3" for="pro">Project Description&emsp;&emsp;</label>
+                    
+                        <textarea class="form-control" id="pro" name="pro" placeholder="project Description" > 
+                       </textarea>
+
+                       </div>
+                       <br>
+
+
+        
+          <button type="submit" class="btn btn-warning bt">Send</button>
+        </form>
+      </div> 
+    </div>
+  </body>
+  <script>
+   
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+   
+    var forms = document.getElementsByClassName('needs-validation');
+   
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+  </script>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		HTML table
+	</title>
+</head>
+
+<style>
+
+
+table
+{
+    margin-top:200px;
+}
+   body
+    {
+        background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+        background-repeat: none;
+        height: 100%;
+    }
+    .error
+    {
+        color:red;
+        display:inline-block;
+       
+    }
+    .succ
+    {
+        color:green;
+        display:inline-block;
+    }
+    button
+    {
+        background-color: red;
+        color:white;
+        font-size:20px;
+        border-radius: 16px;
+        padding:10px;
+    }
+</style>
+<body>
+   <br><br><br><br><br><br>
+    <h1 style="text-align: center;color:blue;"> Registration Form</h1>
+	<table width="60%" style="margin-left: auto;margin-right: auto;">
+       
+		<tr >
+			<th >First name</th>
+			<td><input
+                type="text"
+                name="FirstName"
+                id="fn"
+             size="229">
+             <p id="fne"></p></td>
+		</tr>
+		<tr>
+            <th>Last name</th>
+			<td><input
+                type="text"
+                name="LastName"
+                id="ln"
+             size="229">
+             <p id="lne"></p></td>
+			
+		</tr>
+		<tr>
+            <th >Email</th>
+			<td><input
+                type="email"
+                name="email"
+                id="em"
+             size="229">
+             <p id="eme"></p></td>
+			
+		</tr>
+        <tr>
+            <th>Password</th>
+			<td><input
+                type="password"
+                name="pwd"
+                id="pwd"
+             size="229">
+             <p id="pe"></p></td>
+			
+		</tr>
+        <tr>
+            <th >Re-Enter Password</th>
+			<td><input
+                type="password"
+                name="pwd"
+                id="pwd2"
+             size="229">
+             <p id="ppe"></p></td>
+			
+		</tr>
+        <tr>
+            <th rowspan="3"><label>Gender</label></th>
+        <td>
+    <input type="radio" name="gender" id="male" value="male" />
+      <label for="male">Male</label>
+    </td></tr>
+      <tr>
+        <td>
+      <input type="radio" name="gender" id="female" value="female" />
+      <label for="female">Female</label></td></tr>
+      <tr><td>
+      <input type="radio" name="gender" id="others" value="others" />
+      <label for="others">Others</label>
+    </td>
+    </tr>
+
+            </td>
+        </tr>
+        <tr>
+            <th >Age</th>
+			<td>
+                <input
+        type="text"
+        name="age"
+        size="229"
+        id="a"
+      /><p id="ae"></p>
+   </td>
+		</tr>
+        <tr>
+            <th >Phone</th>
+			<td>
+                <input
+        type="phone"
+        name="phone"
+        size="229"
+        id="ph"
+      />
+      <p id="phe"></p></td>
+		</tr>
+        <tr>
+            <th >Address</th>
+			<td>
+                <textarea rows="4" cols="225" id="ad"></textarea>
+                <p id="ade"></p>
+            </td>
+            
+		</tr>
+        <tr >
+			<th>State</th>
+			<td><input
+                type="text"
+                name="State"
+             size="229" id="st"><p id="ste"></p></td>
+		</tr>
+        <tr>
+            <th>  <label for="gender">Country:</label>
+        </th>
+        <td>
+        <select name="country" id="country">
+            <option value="none" selected disabled hidden>Choose your country</option>
+            <option value="india">India</option>
+            <option value="canada">Canada</option>
+            <option value="korea">South Korea</option>
+          </select>
+        </td>
+        </tr>
+        <tr>
+     <th>Languages known</th>
+     <td>
+        <label for="Kannada">Kannada</label>
+        <input type="checkbox" name="Kannada" value="Kannada" />
+        <label for="Tamil">
+        <label for="Tamil">Tamil</label>
+        <input type="checkbox" name="Tamil" value="Tamil" />
+        <label for="English">English</label>
+        <input type="checkbox" name="English" value="English" />
+        <label for="Telugu">Telugu</label>
+        <input type="checkbox" name="Telugu" value="Telugu" />
+        </label>
+    </td>
+</tr>
+    <tr>
+        <td colspan="2">
+            <input type="checkbox" name="accept" value="accept" />
+            <label for="accept">Hereby I declare all the given details are true</label>
+        </td>
+    </tr>
+<tr>
+    <td style='text-align: right;' colspan="2">
+        <label for="accept">Log into</label>
+        <a href="https://ethnus.com/" target="_blank">ethnus</a>
+        <label>website</label>
+
+    </td>
+</tr>
+
+</table>
+
+<br/><br/>
+<div style="text-align: center;">
+<button type="submit"  onclick="validateForm()" >Register</button>
+</div>
+
+    <script>
+        function validateForm() {
+            const fn = document.getElementById("fn");
+            const em = document.getElementById("em");
+            const ln = document.getElementById("ln");
+            const pwd = document.getElementById("pwd");
+            const pwd2 = document.getElementById("pwd2");
+
+            const a = document.getElementById("a");
+            const ad = document.getElementById("ad");
+            const ph = document.getElementById("ph");
+            const st = document.getElementById("st");
+           
+            
+            const fne = document.getElementById("fne");
+            const eme = document.getElementById("eme");
+            const lne = document.getElementById("lne");
+            const pe = document.getElementById("pe");
+            const ppe = document.getElementById("ppe");
+
+            const ae = document.getElementById("ae");
+            const ade = document.getElementById("ade");
+            const phe = document.getElementById("phe");
+            const ste = document.getElementById("ste");
+           
+
+           
+          
+           
+
+           
+            if (fn.value.trim().length<3) {
+                fne.textContent = "POOR";
+                fne.classList.add("error");
+            }
+            else
+            {
+                fne.textContent = "STRONG";
+                fne.classList.add("succ");
+            }
+
+            if (ln.value.trim().length<3) {
+                lne.textContent = "POOR";
+                lne.classList.add("error");
+            }
+            else
+            {
+                lne.textContent = "STRONG";
+                lne.classList.add("succ");
+            }
+
+            if (em.value.trim().length<10) {
+                eme.textContent = "POOR";
+                eme.classList.add("error");
+            }
+            else
+            {
+                eme.textContent = "STRONG";
+                eme.classList.add("succ");
+            }
+
+            if (pwd.value.trim().length<5) {
+                pe.textContent = "POOR";
+                pe.classList.add("error");
+            }
+            else
+            {
+                pe.textContent = "STRONG";
+                pe.classList.add("succ");
+            }
+
+            if (pwd2.value.trim() != pwd.value.trim()) {
+                ppe.textContent = "POOR OR MISMATCH";
+                ppe.classList.add("error");
+            }
+            else if(pwd2.value.trim()!="")
+            {
+               
+                ppe.textContent = "MATCHED";
+                ppe.classList.add("succ");
+            }
+
+            if (a.value.trim()=="") {
+                ae.textContent = "POOR";
+                ae.classList.add("error");
+            }
+            else
+            {
+                ae.textContent = "STRONG";
+                ae.classList.add("succ");
+            }
+
+            if (ad.value.trim().length<5) {
+                ade.textContent = "POOR";
+                ade.classList.add("error");
+            }
+            else
+            {
+                ade.textContent = "STRONG";
+                ade.classList.add("succ");
+            }
+            if (ph.value.trim().length<10) {
+                phe.textContent = "POOR";
+                phe.classList.add("error");
+            }
+            else
+            {
+                phe.textContent = "STRONG";
+                phe.classList.add("succ");
+            }
+
+            if (st.value.trim().length<3) {
+            ste.textContent = "POOR";
+                ste.classList.add("error");
+            }
+            else
+            {
+                ste.textContent = "STRONG";
+                ste.classList.add("succ");
+            }
+
+           
+        }
+    </script>
+</body>
+
+</html>

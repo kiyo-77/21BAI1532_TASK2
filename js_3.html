@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <label for="num1">1st Number: </label>
+    <input type="number" id="num1" required><br><br>
+
+    <label for="num2">2nd Number: </label>
+    <input type="number" id="num2" required><br><br>
+
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button><br><br>
+
+    <div >The result is: <p id="result"></p></div>
+
+    <script>
+        function mul() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById("result").innerHTML = "Please enter valid numbers.";
+                return;
+            }
+            const multi = num1 * num2;
+           
+            document.getElementById("result").innerHTML = `${multi}`;
+        }
+        function div() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById("result").innerHTML = "Please enter valid numbers.";
+                return;
+            }
+            const divi= num1 / num2;
+           
+            document.getElementById("result").innerHTML = `${divi}`;
+        }
+       
+    </script>
+</body>
+</html>
